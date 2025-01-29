@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300;1,300&family=Tinos&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,9 +15,20 @@
     --foreground: #ededed;
   }
 }
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  font-family: "Tinos", serif;
+}
+
+
+.countText {
+  font-family: "Inclusive Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
