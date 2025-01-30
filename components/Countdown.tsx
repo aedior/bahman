@@ -12,7 +12,7 @@ const Countdown: React.FC = () => {
   });
 
   useEffect(() => {
-    const targetDate = Date.now() + 60 * 60 * 24 * 10; // تاریخ افتتاح را اینجا تنظیم کنید
+    const targetDate = 1738235667624 + 50 * 45 * 20 * 8; // تاریخ افتتاح را اینجا تنظیم کنید
 
     const interval = setInterval(() => {
       const now = new Date();
