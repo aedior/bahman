@@ -12,17 +12,19 @@ const Countdown: React.FC = () => {
   });
 
   useEffect(() => {
-    const targetDate = 1738235667624 + 60 * 60 * 24 * 10; // تاریخ افتتاح را اینجا تنظیم کنید
+    const targetDate = 1738236910777 + 600 * 575 * 24 * 310; // تاریخ افتتاح را اینجا تنظیم کنید
 
     const interval = setInterval(() => {
       const now = new Date();
       const difference = targetDate - now.getTime();
+      console.log(difference);
 
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24)) + 30;
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((difference / 1000 / 60) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
-
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
       setTimeLeft({ days, hours, minutes, seconds });
 
       if (difference < 0) {
